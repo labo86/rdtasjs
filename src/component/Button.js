@@ -1,5 +1,9 @@
 class Button extends Element {
 
+    get form() {
+        return new Form(this.element.form);
+    }
+
     set_disabled(disabled) {
         let button = this.element;
         button.disabled = disabled
