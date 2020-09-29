@@ -16,23 +16,6 @@ function appendToInnerHtml(element, content) {
 }
 
 /**
- *
- * @param {HTMLElement} element
- * @param {string} name
- */
-function switchVisibility(element, name) {
-	for ( let child of element.children ) {
-		if ( !child.hasAttribute('data-page-name') )
-			child.style.display = 'none';
-		else if ( child.getAttribute('data-page-name') === name ) {
-			child.style.display = null;
-		} else {
-			child.style.display = 'none';
-		}
-	}
-}
-
-/**
  * Convierte un object a search params
  * @param {Object} object
  */
@@ -64,6 +47,5 @@ function openBlobInNewWindow(blob) {
 
 export {formAddParams};
 export {openBlobInNewWindow};
-export {switchVisibility};
 export {objectToSearchParams};
 export {appendToInnerHtml};

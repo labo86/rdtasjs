@@ -1,16 +1,6 @@
 import * as lib from '../src/index.js';
 import {expect} from "@jest/globals";
 
-test('basic usage', () => {
-  document.body.innerHTML = "<div id='test'><div id='a' data-page-name='a'></div><div id='b' data-page-name='b'></div></div>";
-
-
-  lib.switchVisibility(document.getElementById('test'), 'a');
-
-  let style = document.getElementById('b').style.display;
-  expect(style).toEqual('none');
-});
-
 test('object_to_search_params empty', () => {
 
   let actual = lib.objectToSearchParams({});

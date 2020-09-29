@@ -102,7 +102,6 @@ return /******/ (function(modules) { // webpackBootstrap
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "formAddParams", function() { return formAddParams; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "openBlobInNewWindow", function() { return openBlobInNewWindow; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "switchVisibility", function() { return switchVisibility; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "objectToSearchParams", function() { return objectToSearchParams; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "appendToInnerHtml", function() { return appendToInnerHtml; });
 /**
@@ -119,22 +118,6 @@ function appendToInnerHtml(element, content) {
 
   while (new_content.firstChild) {
     element.appendChild(new_content.firstChild);
-  }
-}
-/**
- *
- * @param {HTMLElement} element
- * @param {string} name
- */
-
-
-function switchVisibility(element, name) {
-  for (var child of element.children) {
-    if (!child.hasAttribute('data-page-name')) child.style.display = 'none';else if (child.getAttribute('data-page-name') === name) {
-      child.style.display = null;
-    } else {
-      child.style.display = 'none';
-    }
   }
 }
 /**
@@ -171,7 +154,6 @@ function openBlobInNewWindow(blob) {
   var file = window.URL.createObjectURL(blob);
   window.open(file);
 }
-
 
 
 
