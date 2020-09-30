@@ -37,4 +37,11 @@ class TabControls extends Element {
             });
         }
     }
+
+    connect_contents(contents_id) {
+        let contents = new TabContents(contents_id);
+        this.add_select_listener(function(id) {
+            contents.change_page(id);
+        });
+    }
 }
