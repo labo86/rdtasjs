@@ -25,21 +25,22 @@ class SnackBar {
         this.close_button.element.classList.remove('d-none');
 
         let element = this.element;
-        this.close_button.add_click_listener(function() {
+        this.close_button.click(function() {
             element.remove();
         });
 
-        document.body.appendChild(this.element);
+        document.body.appendChild(element);
     }
 
     show_success(message) {
         this.alert.classList.add('alert-success');
         this.message_box.innerHTML = message;
+
         let element = this.element;
         setTimeout(function() {
             element.remove();
         }, 4000);
 
-        document.body.appendChild(this.element);
+        document.body.appendChild(element);
     }
 }
