@@ -118,7 +118,7 @@ class SectionEasyServices extends Element {
                 frame.src = window.URL.createObjectURL(blob);
                 page.snack_bar.show_success('Solicitud exitosa');
             });
-            container.appendChild(form.element);
+            container.appendChild(form.dom);
             container.appendChild(frame);
 
             this.contents.appendChild(container);

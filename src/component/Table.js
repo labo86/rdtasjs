@@ -1,11 +1,11 @@
 class Table extends Element {
 
     get body() {
-        let table = this.element;
+        let table = this.dom;
         return table.getElementsByTagName('TBODY')[0];
     }
     get head() {
-        let table = this.element;
+        let table = this.dom;
         return table.getElementsByTagName('THEAD')[0];
     }
     get column_count() {
