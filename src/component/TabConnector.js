@@ -37,7 +37,7 @@ class TabConnector {
         let control = new class extends Element {
 
             get element_list() {
-                return this.element.querySelectorAll('[role="tab"]');
+                return this.dom.querySelectorAll('[role="tab"]');
             }
 
             select(target_name) {
